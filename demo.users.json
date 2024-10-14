@@ -1,0 +1,176 @@
+[{
+  "_id": {
+    "$oid": "670d1808cf1e7a664bc64502"
+  },
+  "name": "nguyễn văn B",
+  "password": "1234567",
+  "email": "dinhkin@gmail.com",
+  "photo_url": "https://i.pinimg.com/564x/e6/34/d3/e634d384fb0c31d7245d70d6f70f830d.jpg",
+  "created_at": {
+    "$date": "2024-10-14T13:09:28.262Z"
+  },
+  "updated_at": {
+    "$date": "2024-10-14T13:09:28.262Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "670d1839cf1e7a664bc6450e"
+  },
+  "name": "nguyễn văn bd",
+  "password": "",
+  "email": "user01@gmail.com",
+  "photo_url": "https://i.pinimg.com/564x/e6/34/d3/e634d384fb0c31d7245d70d6f70f830d.jpg",
+  "created_at": {
+    "$date": "2024-10-14T13:10:17.672Z"
+  },
+  "updated_at": {
+    "$date": "2024-10-14T13:10:17.672Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "670d1849cf1e7a664bc64512"
+  },
+  "name": "test user 1",
+  "password": "",
+  "email": "user02@gmail.com",
+  "photo_url": "https://i.pinimg.com/564x/e6/34/d3/e634d384fb0c31d7245d70d6f70f830d.jpg",
+  "created_at": {
+    "$date": "2024-10-14T13:10:33.115Z"
+  },
+  "updated_at": {
+    "$date": "2024-10-14T13:10:33.116Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "670d1861cf1e7a664bc64516"
+  },
+  "name": "Quản Trị Hệ Thống & Mạng123",
+  "password": "123",
+  "email": "nguyenhoangphuc201124@gmail.com",
+  "photo_url": "https://i.pinimg.com/564x/e6/34/d3/e634d384fb0c31d7245d70d6f70f830d.jpg",
+  "created_at": {
+    "$date": "2024-10-14T13:10:57.183Z"
+  },
+  "updated_at": {
+    "$date": "2024-10-14T13:10:57.183Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "670d19a6bc651ccf2e1e6530"
+  },
+  "name": "nhân viên dev",
+  "password": "",
+  "email": "test01@gamil.com",
+  "photo_url": "https://i.pinimg.com/564x/e6/34/d3/e634d384fb0c31d7245d70d6f70f830d.jpg",
+  "created_at": {
+    "$date": "2024-10-14T13:16:22.228Z"
+  },
+  "updated_at": {
+    "$date": "2024-10-14T13:16:22.228Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "670d19c4bc651ccf2e1e653a"
+  },
+  "name": "Dịch vụ cải tạo nhà",
+  "password": "",
+  "email": "nguyenhoangphuc201123@gmail.com",
+  "photo_url": "https://i.pinimg.com/564x/e6/34/d3/e634d384fb0c31d7245d70d6f70f830d.jpg",
+  "created_at": {
+    "$date": "2024-10-14T13:16:52.414Z"
+  },
+  "updated_at": {
+    "$date": "2024-10-14T13:16:52.414Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "670d19d2bc651ccf2e1e653e"
+  },
+  "name": "Nhan viên bán hàng",
+  "password": "",
+  "email": "nguyenhoangphuc20122@gmail.com",
+  "photo_url": "https://i.pinimg.com/564x/e6/34/d3/e634d384fb0c31d7245d70d6f70f830d.jpg",
+  "created_at": {
+    "$date": "2024-10-14T13:17:06.799Z"
+  },
+  "updated_at": {
+    "$date": "2024-10-14T13:17:06.799Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "670d19dabc651ccf2e1e6542"
+  },
+  "name": "Quản Trị Hệ Thống & Mạng123",
+  "password": "",
+  "email": "nguyenhoangphuc201122@gmail.com",
+  "photo_url": "https://i.pinimg.com/564x/e6/34/d3/e634d384fb0c31d7245d70d6f70f830d.jpg",
+  "created_at": {
+    "$date": "2024-10-14T13:17:14.987Z"
+  },
+  "updated_at": {
+    "$date": "2024-10-14T13:17:14.987Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "670d2662b2f715c2bc76ff4b"
+  },
+  "name": "nhân viên dev22",
+  "password": "123",
+  "email": "nguyenhoangphuc211220@gmail.com",
+  "photo_url": "https://i.pinimg.com/564x/e6/34/d3/e634d384fb0c31d7245d70d6f70f830d.jpg",
+  "created_at": {
+    "$date": "2024-10-14T14:10:42.333Z"
+  },
+  "updated_at": {
+    "$date": "2024-10-14T14:10:42.333Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "670d390834f5735efe5c538d"
+  },
+  "name": "Lập Trình & Phát Triển Phần Mềm",
+  "password": "1234567",
+  "email": "nguyenhoangphuc201122@gmail.com",
+  "photo_url": "https://i.pinimg.com/564x/e6/34/d3/e634d384fb0c31d7245d70d6f70f830d.jpg",
+  "created_at": {
+    "$date": "2024-10-14T15:30:16.240Z"
+  },
+  "updated_at": {
+    "$date": "2024-10-14T15:30:16.241Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "670d395234f5735efe5c53ae"
+  },
+  "name": "Lập Trình & Phát Triển Phần Mềm",
+  "password": "213444",
+  "email": "nguyenhoangphuc201122@gmail.com",
+  "photo_url": "https://www.google.com/url?sa=i&url=https%3A%2F%2Finkythuatso.com%2Fhinh-anh-dep%2Fhinh-anh-ngay-moi-hanh-phuc-4912.html&psig=AOvVaw145JW0X_HcEV_4_Y308t_A&ust=1728963836740000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCKDOjqz6jIkDFQAAAAAdAAAAABAE",
+  "created_at": {
+    "$date": "2024-10-14T15:31:30.361Z"
+  },
+  "updated_at": {
+    "$date": "2024-10-14T15:31:30.361Z"
+  },
+  "__v": 0
+}]

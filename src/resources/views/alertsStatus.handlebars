@@ -1,0 +1,15 @@
+<div class="card shadow" style="margin: 10% auto; max-width:500px;">
+    <div class="card-header bg-white border-0 text-center p-2">
+        {{#if (compare status '===' 'success') }}
+            <i class="bi bi-check2-circle text-success" style="font-size: 70px;"></i>
+        {{else if (compare status '===' 'error')}}
+            <i class="bi bi-exclamation-triangle text-danger" style="font-size: 70px;"></i>
+        {{/if}}
+    </div>
+    <div class="card-body text-center">
+        <h5 class="card-title">{{message}}</h5>
+    </div>
+    <div class="card-footer text-center border-0 bg-white pb-4">
+        <a href="{{nextRoute}}" type="button" class="btn btn-primary">Quay lại trang chủ</a>
+    </div>
+</div>

@@ -1,0 +1,23 @@
+ <form action="{{action}}?_method={{method}}" method="post">
+        <div class="mb-3">
+            <label for="photo_url" class="form-label">ảnh đại diện</label>
+             <input type="text" name="photo_url" class="form-control" id="photo_url" value="{{#if (isdefined user)}}{{user.photo_url}}{{/if}}" >
+             <p class="text-start text text-danger">{{ messages.photo_url.msg}}</p>
+        </div>
+        <div class="mb-3">
+            <label for="nameInput" class="form-label">name</label>
+            <input name="name" type="text" class="form-control" id="nameInput" value="{{#if (isdefined user)}}{{user.name}}{{/if}}">
+            <p class="text-start text text-danger">{{ messages.name.msg}}</p>
+        </div>
+        <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Email address</label>
+            <input name="email" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="{{#if (isdefined user)}}{{user.email}}{{/if}}">
+             <p class="text-start text text-danger">{{ messages.email.msg}}</p>
+        </div>
+        <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">Password</label>
+            <input name="password" type="password" class="form-control" id="exampleInputPassword1" value="{{#if (isdefined user)}}{{user.password}}{{/if}}">
+            <p class="text-start text text-danger">{{ messages.password.msg}}</p>
+        </div>
+        <button class="btn btn-primary">{{#if user}} update {{else}} create  {{/if}}</button>
+</form>
