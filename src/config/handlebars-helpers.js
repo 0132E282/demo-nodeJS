@@ -9,6 +9,8 @@ module.exports = {
             return value1 < value2;
         case '===':
             return value1 === value2;
+        case '==':
+              return value1 == value2;
         case '!==':
             return value1 !== value2;
         case '>=':
@@ -20,7 +22,13 @@ module.exports = {
     }
   },
   isdefined (value) {
-    return value !== undefined;
+    if(typeof value === 'object'){
+      return Object.keys(value).length > 0;
+    }else if (typeof value === 'array'){
+      return value.length > 0;
+    }else {
+      return value !== undefined && value !== null
+    }
   },
   forNumber(start, end, block) {
     var accum = '';
@@ -28,11 +36,12 @@ module.exports = {
         accum += block.fn(i);
     }
     return accum;
-  },
+  }, 
   additionAllowed(a, b) {
     return a + b;
   },
   formatDate(date) {
     return moment(date).format('DD-MM-YYYY');
-  }
+  },
+
 }

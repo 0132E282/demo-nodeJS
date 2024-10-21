@@ -1,0 +1,6 @@
+<select  class="form-select" name="{{name}}" id="{{id}}">
+    <option value="">Chọn danh mục cha</option>
+    {{#each categories}}
+       {{> components/category/options-category-multi-level category=this }}
+    {{/each}}
+</select>

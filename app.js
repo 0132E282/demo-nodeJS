@@ -6,17 +6,20 @@ const methodOverride  = require('method-override');
 var flash = require('connect-flash');
 const session = require('express-session');
 
-const database = require( path.join(__dirname, 'src/config/database'))
-const router = require( path.join(__dirname, 'src/routes/index'));
-
-
 const app = express()
+const database = require( path.join(__dirname, 'src/config/database'))
+const router = require(path.join(__dirname, 'src/routes/index'));
+
 const port = process.env.APP_PORT || 3000;
-app.use(methodOverride('_method'))
+// Serve static files trong thư mục uploads
+app.use('/storage', express.static('src/storage'));
 // middleware
 app.use(express.urlencoded({
   extended: true,  // support for parsing application/x-www-form-urlencoded
 }));
+
+app.use(express.json());
+app.use(methodOverride('_method'));
 
 app.use(session({
   secret: process.env.SESSION_SECRET,
@@ -24,18 +27,18 @@ app.use(session({
   saveUninitialized: process.env.SESSION_SAVE_UNINITIALIZED,
   cookie: { maxAge: 600000 } // 10 minutes
 }))
+
 app.use(flash());
-
-app.use(express.json())
-
 
 // template engine
 app.engine('handlebars', engine({
-  helpers: require( path.join(__dirname, 'src/config/handlebars-helpers')) //only need this
+  helpers: require( path.join(__dirname, 'src/config/handlebars-helpers')) ,
+  layoutsDir: path.join(__dirname, 'src/resources/views/layouts'),  // Thư mục chứa layout
+  partialsDir: path.join(__dirname, 'src/resources/views/partials'),  // Thư mục chứa partials (components)
 }));
-app.set('view engine', 'handlebars');
-app.set('views', path.join(__dirname, 'src/resources/views'));
 
+app.set('view engine', 'handlebars');
+app.set('views', path.join(__dirname, 'src/resources/views/pages'));
 
 // router
 app.use('/',router);

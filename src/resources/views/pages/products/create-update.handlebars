@@ -1,0 +1,56 @@
+<div class="card">
+    <div class="card-header">
+        Them mới danh mục
+    </div>
+    <div class="card-body">
+         <form action="{{#if product}}/products/edit/{{product._id}}?_method=put {{else}} create {{/if}}" enctype="multipart/form-data" method="post" >
+                <div class="mb-3">
+                    <label for="thumbnail" class="form-label d-block ">ảnh đại diện</label>
+                    {{#if product}}
+                        <img class="img-thumbnail my-2" src="{{product.thumbnail}}" alt="" style="width: 100px; height: 100px; ">
+                    {{/if}}
+                    <input type="file" name="thumbnail" class="form-control" id="thumbnail"  >
+                    <p class="text-start text text-danger">{{ messages.thumbnail.msg}}</p>
+                </div>
+                <div class="mb-3">
+                     <label for="thumbnail" class="form-label d-block ">ảnh mô tả</label>
+                    {{#if product}}
+                        {{#each product.images}}
+                           <img class="img-thumbnail my-2 me-1" src="{{this}}" alt="" style="width: 100px; height: 100px; ">
+                        {{/each}}
+                    {{/if}}
+                    <input type="file" name="images" class="form-control" id="images" multiple >
+                    <p class="text-start text text-danger">{{ messages.images.msg}}</p>
+                </div>
+                <div class="mb-3">
+                    <label for="nameInput" class="form-label">name</label>
+                    <input name="name" type="text" class="form-control" id="nameInput" value="{{#if product}}{{product.name}}{{/if}}">
+                    <p class="text-start text text-danger">{{ messages.name.msg}}</p>
+                </div>
+                <div class="mb-3">
+                    <label for="category-select" class="form-label">Danh mục cha</label>
+                    {{> components/category/select-category-multi-level  categories=categories name="category" id="category-select" }}
+                    <p class="text-start text text-danger">{{ messages.category.msg}}</p>
+                </div>
+                <div class="mb-3">
+                  <label for="nameInput" class="form-label">Mo tả</label>
+                    <textarea name="description" class="form-control" id="descriptionInput" rows="3">{{#if product}}{{product.description}}{{/if}}</textarea>
+                    <p class="text-start text text-danger">{{ messages.description.msg}}</p>
+                </div>
+                 <div class="mb-3 row">
+                    <div class="col-6">
+                        <label for="priceInput" class="form-label">Giá </label>
+                        <input name="price" type="text" class="form-control" id="priceInput" value="{{#if product }}{{product.name}}{{/if}}">
+                        <p class="text-start text text-danger">{{ messages.price.msg}}</p>
+                    </div>
+                  <div class="col-6">
+                        <label for="price-sell-input" class="form-label">Giá Giảm</label>
+                        <input name="price_sell" type="text" class="form-control" id="price-sell-input" value="{{#if product}}{{product.name}}{{/if}}">
+                        <p class="text-start text text-danger">{{ messages.price_sell.msg}}</p>
+                    </div>
+                </div>
+                <button class="btn btn-primary">{{#if product}} Cập nhập {{else}} Thêm Mới  {{/if}}</button>
+                <a href="/products" class="btn btn-primary">Quay lại</a>
+        </form>
+    </div>
+</div>

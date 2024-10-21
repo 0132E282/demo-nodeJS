@@ -1,0 +1,9 @@
+
+{{#if (isdefined category.children)}}
+    <option value="{{category._id}}">{{level}} {{category.name}}</option>
+    {{#each category.children }} 
+        {{> components/category/options-category-multi-level category=this level="--"}}
+    {{/each}}
+{{else}}
+  <option value="{{category._id}}">{{level}}  {{category.name}}</option>
+{{/if}}

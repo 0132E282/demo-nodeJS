@@ -1,0 +1,29 @@
+<div class="card">
+    <div class="card-header">
+        Them mới danh mục
+    </div>
+    <div class="card-body">
+         <form action="{{#if (isdefined category._id)}}/category/edit/{{category._id}}?_method=put {{else}} create {{/if}}" enctype="multipart/form-data" method="post" >
+                <div class="mb-3">
+                    <label for="photo_url" class="form-label d-block ">ảnh đại diện</label>
+                    {{#if category.thumbnail}}
+                        <img class="img-thumbnail my-2" src="{{category.thumbnail}}" alt="" style="width: 100px; height: 100px; ">
+                    {{/if}}
+                    <input type="file" name="thumb" class="form-control" id="photo_url"  >
+                    <p class="text-start text text-danger">{{ messages.thumbnail.msg}}</p>
+                </div>
+                <div class="mb-3">
+                    <label for="nameInput" class="form-label">name</label>
+                    <input name="name" type="text" class="form-control" id="nameInput" value="{{#if (isdefined category)}}{{category.name}}{{/if}}">
+                    <p class="text-start text text-danger">{{ messages.name.msg}}</p>
+                </div>
+                <div class="mb-3">
+                    <label for="nameInput" class="form-label">Danh mục cha</label>
+                     {{> components/category/select-category-multi-level name="parent" categories=categories name="parent" }}
+                    <p class="text-start text text-danger">{{ messages.parent.msg}}</p>
+                </div>
+                <button class="btn btn-primary">{{#if category._id}} Cập nhập {{else}} Thêm mới  {{/if}}</button>
+                 <a href="/category" class="btn btn-primary">quay lại</a>
+        </form>
+    </div>
+</div>

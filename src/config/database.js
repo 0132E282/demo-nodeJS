@@ -7,9 +7,9 @@ async function  connect(){
               useNewUrlParser: true,
               useUnifiedTopology: true,
             })
-            .then(() => console.log('Connected success !'));
+            .then(() => console.log('Mongodb connected success !'));
     } catch (error) {
-        console.log('Connected error!')
+        console.log('Mongodb connected error!')
     }
 }
 module.exports = {connect};

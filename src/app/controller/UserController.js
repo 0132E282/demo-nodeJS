@@ -26,10 +26,10 @@ class UserController {
                     nextPage: ((page * limit) < totalPage) ? page + 1 : null,
                 }
                 users = users.map(user => user.toObject())
-                res.render('index', { users, paginate, router: `/users/${users._id}`});
+                res.render('users/index', { users, paginate, router: `/users/${users._id}`});
             });
         } catch (error) {
-            res.render('index');
+            res.render('users/index');
         }
     }
    async showForm(req, res){
@@ -37,13 +37,13 @@ class UserController {
             if(req.params.id){
                await User.findById(req.params.id)
                .then((user) => {
-                 res.render('update',{
+                 res.render('users/update',{
                      user: user.toObject(),
                      messages: req.flash('error')
                  })
                });
             }else{
-                res.render('create',{ messages: {...req.flash('error')[0]}})
+                res.render('users/create',{ messages: {...req.flash('error')[0]}})
             }
         } catch (error) {
             
@@ -54,13 +54,13 @@ class UserController {
         const formData = {...req.body};
         const user = new User(formData);
         user.save();
-        res.redirect('alert/success');
+        res.redirect('users/alert/success');
       } catch (error) {
-         res.redirect('alert/error');
+         res.redirect('users/alert/error');
       }
     }
     notification(req, res, next){
-        res.render('alertsStatus', {
+        res.render('users/alertsStatus', {
             message: req.params.status == "success" ? 'thành công' : 'có lỗi xây ra',
             nextRoute: '/users',
             status: req.params.status
@@ -68,18 +68,18 @@ class UserController {
     }
    async edit (req, res) {
       try {
-        const user = await User.updateOne({_id: req.params.id},  { $set: req.body })
-        res.redirect('alert/success');
+        await User.updateOne({_id: req.params.id},  { $set: req.body })
+        res.redirect('users/alert/success');
       }catch (error) {
-        res.redirect('alert/error');
+        res.redirect('users/alert/error');
       }
     }
     async remove (req, res) {
         try {
            await User.deleteOne({_id: req.params.id })
-            res.redirect('alert/success');
+            res.redirect('users/alert/success');
           }catch (error) {
-            res.redirect('alert/error');
+            res.redirect('users/alert/error');
           }
     }
 }
