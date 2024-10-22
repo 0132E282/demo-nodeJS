@@ -40,12 +40,12 @@
                  <div class="mb-3 row">
                     <div class="col-6">
                         <label for="priceInput" class="form-label">Giá </label>
-                        <input name="price" type="text" class="form-control" id="priceInput" value="{{#if product }}{{product.name}}{{/if}}">
+                        <input name="price" type="text" class="form-control" id="priceInput" value="{{#if product }}{{product.price}}{{/if}}">
                         <p class="text-start text text-danger">{{ messages.price.msg}}</p>
                     </div>
                   <div class="col-6">
                         <label for="price-sell-input" class="form-label">Giá Giảm</label>
-                        <input name="price_sell" type="text" class="form-control" id="price-sell-input" value="{{#if product}}{{product.name}}{{/if}}">
+                        <input name="price_sell" type="text" class="form-control" id="price-sell-input" value="{{#if product}}{{product.price}}{{/if}}">
                         <p class="text-start text text-danger">{{ messages.price_sell.msg}}</p>
                     </div>
                 </div>

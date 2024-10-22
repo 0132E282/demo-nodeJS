@@ -4,16 +4,13 @@ const router = express.Router();
 const userRouter = require(path.join(__dirname, 'userRouter.js'));
 const categoryRouter = require(path.join(__dirname, 'categoryRoute.js'));
 const productsRouter = require(path.join(__dirname, 'productsRoute'));
+const siteRouter = require(path.join(__dirname, 'siteRoute'));
 
-router.get('/', (req, res) => {
-    res.send('Welcome to the homepage!');
-});
-
-
-// user-route
+router.use('/', siteRouter);
 router.use('/users', userRouter);
 router.use('/category', categoryRouter);
 router.use('/products', productsRouter);
+
 router.use(':any/alert/:status', function(req,res){
     res.render('site/alerts-status', {
         message: req.params.status == "success" ? 'thành công' : 'có lỗi xây ra',

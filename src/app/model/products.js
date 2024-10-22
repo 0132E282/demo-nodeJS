@@ -8,6 +8,7 @@ const Products = new Schema({
     description: { type: String, min: 5, max: 40, required: true},
     thumbnail: { type: String},
     images: [{ type: String }],
+    price: { type: Number, required: true},
     reviews: [{ type: ObjectId, ref:'reviews', required: false }],
     category: { type: ObjectId, ref: 'categories', required: true},
     brands : { type: ObjectId, ref: 'brands', required: false},

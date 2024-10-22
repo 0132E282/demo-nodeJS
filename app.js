@@ -9,6 +9,7 @@ const session = require('express-session');
 const app = express()
 const database = require( path.join(__dirname, 'src/config/database'))
 const router = require(path.join(__dirname, 'src/routes/index'));
+app.use(express.static(path.join(__dirname, 'src/public')));
 
 const port = process.env.APP_PORT || 3000;
 // Serve static files trong thư mục uploads

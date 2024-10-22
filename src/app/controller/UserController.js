@@ -47,23 +47,13 @@ class UserController {
             if(req.params.id){
                await User.findById(req.params.id)
                .then((user) => {
-<<<<<<< HEAD
                  res.render('users/update',{
-=======
-                 // gửi đi người dùng tìm kiếm, thông tinh error form khi người dùng thực không thành công middleware  cập nhập
-                 res.render('update',{
->>>>>>> 75b298fdfb9ddcbd5c51c3a17d611467d7a00249
                      user: user.toObject(),
                      messages: req.flash('error')
                  })
                });
             }else{
-<<<<<<< HEAD
                 res.render('users/create',{ messages: {...req.flash('error')[0]}})
-=======
-                  //thông tinh error form khi người dùng thực không thành công middleware  tạo
-                res.render('create',{ messages: {...req.flash('error')[0]}})
->>>>>>> 75b298fdfb9ddcbd5c51c3a17d611467d7a00249
             }
         } catch (error) {
                  // sữ lý lỗi
